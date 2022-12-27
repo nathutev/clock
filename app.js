@@ -15,7 +15,7 @@ function update(){
  
   function formatDate(date){
     let dayOfMonth = date.getDate();
-    let month = date.getMonth();
+    let month = date.getMonth() + 1;
     let year = date.getFullYear();
   
    return `${dayOfMonth}.${month}.${year}`;
