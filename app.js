@@ -25,12 +25,17 @@ function update(){
     let hour = time.getHours();
     let minute = time.getMinutes();
     let second = time.getSeconds();
-    
-    if(minute <= 9){
-      return `${hour}:0${minute}:${second}`;
-    };
 
-    if(second <= 9){
+
+    if(minute <= 9 && second <= 9){
+      return `${hour}:0${minute}:0${second}`;
+    }
+
+    else if(minute <= 9){
+      return `${hour}:0${minute}:${second}`;
+    }
+
+    else if(second <= 9){
       return `${hour}:${minute}:0${second}`;
     }
 
