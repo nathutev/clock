@@ -12,7 +12,7 @@ function update(){
   
   dateLabel.innerHTML = formatDate(date);
   timeLabel.innerHTML = formatTime(time);
- 
+  
   function formatDate(date){
     let dayOfMonth = date.getDate();
     let month = date.getMonth() + 1;

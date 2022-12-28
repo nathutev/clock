@@ -1,22 +1,22 @@
-body {
+html, body {
   background-color: #141414;
-  text-align: center;
 }
 
 #date {
-  font-family: 'Merriweather', serif;
-  color: rgb(255, 255, 255);
-  font-size: 1000%;
+  font-size: 300%;
+  top: 65%;
 }
 
 #time {
-  font-family: 'Merriweather', serif;
-  color: rgb(255, 255, 255);
   font-size: 1000%;
+  top: 45%;
 }
 
-#clock {
-  position: relative;
-  margin-top: 14%;
-  margin-bottom: 14%;
+#time, #date {
+  font-family: 'Merriweather', serif;
+  color: rgb(255, 255, 255);
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
