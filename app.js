@@ -1,5 +1,3 @@
-
-
 const dateLabel = document.getElementById("date");
 const timeLabel = document.getElementById("time");
 
@@ -44,3 +42,22 @@ function update(){
     };
   };
 };
+
+//-----------------------------------------
+
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setFavicon(darkModeOn) {
+  const linkElement = document.querySelector("link[rel*='icon']");
+  if (darkModeOn) {
+    linkElement.href = 'white_clock.ico';
+  } else {
+    linkElement.href = 'black_clock.ico';
+  }
+}
+
+darkModeMediaQuery.addListener((event) => {
+  setFavicon(event.matches);
+});
+
+setFavicon(darkModeMediaQuery.matches);
